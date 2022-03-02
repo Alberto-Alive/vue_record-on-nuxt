@@ -2,23 +2,6 @@
 <container>
   <v-row>
     <v-col class="text-center">
-      <img
-        src="/v.png"
-        alt="Vuetify.js"
-        class="mb-5"
-      >
-      <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote>
-    </v-col>
-  </v-row>
-  <v-row>
-    <v-col class="text-center">
        <h2>Vue Record</h2>
     <div class="item">
       <VueRecordAudio @result="onResultAudio" mode="press" />
