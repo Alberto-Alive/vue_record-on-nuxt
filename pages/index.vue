@@ -2,12 +2,12 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div>
-        <v-card class="mb-4">
+        <v-card class="mb-4" width="fit-content" min-width="700px">
           <v-card-text :v-model="e1">
             Question {{ e1 }}: {{ questions[`${e1-1}`].text }}
           </v-card-text>
         </v-card>
-        <v-stepper v-model="e1">
+        <v-stepper v-model="e1" width="fit-content" min-width="700px" align="center">
           <v-stepper-header>
             <template v-for="n in steps">
               <v-stepper-step
@@ -23,7 +23,7 @@
             </template>
           </v-stepper-header>
 
-          <v-stepper-items>
+          <v-stepper-items >
             <v-stepper-content
               v-for="n in steps"
               :key="`${n}-content`"
@@ -32,16 +32,21 @@
               <v-card
                 class="mb-12"
                 color="grey lighten-1"
-                height="200px"
+                width="fit-content"
+                min-width="640px"
               ><div class="item">
       <span>Videos</span>
-      <VueRecordVideo @result="onResultVideo" mode="press" />
-      <video
-        v-for="(video, index) in videos"
-        :src="video"
-        :key="index"
+      <VueRecordVideo @result="onResultVideo" mode="press" class="text-right"/>
+      <video 
+        v-if="videos[`${e1-1}`]"
+        :v-model="e1"
+        :src="videos[`${e1-1}`]"
         controls="controls"
       />
+      <text
+        v-else
+        style="background:red;"
+      > Hello </text>
     </div></v-card>
 
               <v-btn color="primary" @click="nextStep(n)"> Continue </v-btn>
@@ -91,7 +96,8 @@ export default {
       }
     },
     onResultVideo(blob) {
-      this.videos.push(window.URL.createObjectURL(blob));
+      this.videos[this.e1-1]= window.URL.createObjectURL(blob);
+      console.log(this.videos)
     },
   }
 }
