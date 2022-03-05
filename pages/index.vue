@@ -86,7 +86,6 @@ export default {
       }
     },
   },
-
   methods: {
     nextStep(n) {
       if (n === this.steps) {
@@ -96,7 +95,8 @@ export default {
       }
     },
     onResultVideo(blob) {
-      this.videos[this.e1-1]= window.URL.createObjectURL(blob);
+      this.videos[this.e1-1] = window.URL.createObjectURL(blob);
+      this.videos = this.videos.map(value => value)
       console.log(this.videos)
     },
   }
