@@ -102,6 +102,11 @@ export default {
           to: '/'
         },
         {
+          icon: 'mdi-square',
+          title: 'CamAndVid',
+          to: '/CamAndVid'
+        },
+        {
           icon: 'mdi-circle',
           title: 'Camera',
           to: '/camera'
