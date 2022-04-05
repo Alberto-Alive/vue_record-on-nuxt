@@ -102,6 +102,16 @@ export default {
           to: '/'
         },
         {
+          icon: 'mdi-circle',
+          title: 'Camera',
+          to: '/camera'
+        },
+        {
+          icon: 'mdi-apps',
+          title: 'People',
+          to: '/people'
+        },
+        {
           icon: 'mdi-chart-bubble',
           title: 'Inspire',
           to: '/inspire'

@@ -2,7 +2,7 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div>
-        <v-card class="mb-4" width="fit-content" min-width="700px">
+        <v-card class="mb-4" width="fit-content" max-width="700px">
           <v-card-text :v-model="e1">
             Question {{ e1 }}: {{ questions[`${e1-1}`].text }}
           </v-card-text>
@@ -36,7 +36,7 @@
                 min-width="640px"
               ><div class="item">
       <span>Videos</span>
-      <VueRecordVideo @result="onResultVideo" mode="press" class="text-right"/>
+      <VueRecordVideo @result="onResultVideo" @stream="toggleCamera" mode="press" class="text-right"/>
       <video 
         v-if="videos[`${e1-1}`]"
         :v-model="e1"
@@ -75,7 +75,7 @@ export default {
         {text: 'What is q3?'},
         {text: 'What is q4?'},
         {text: 'What is q5?'},
-      ]
+      ],
     }
   },
 
