@@ -102,6 +102,16 @@ export default {
           to: '/'
         },
         {
+          icon: 'mdi-star',
+          title: 'CamAndVidTestStepper',
+          to: '/CamAndVidTestStepper'
+        },
+        {
+          icon: 'mdi-star',
+          title: 'CamAndVidTest',
+          to: '/CamAndVidTest'
+        },
+        {
           icon: 'mdi-square',
           title: 'CamAndVid',
           to: '/CamAndVid'
