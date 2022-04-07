@@ -1,8 +1,7 @@
 <template>
   <v-container>
-    <video ref="video" autoplay></video>
+    <media id="lol" />
         <v-btn class="btn btn-danger play" color="red" @click="openCamera()" title="Play"><i data-feather="play-circle"></i></v-btn>
-       
   </v-container>
 </template>
 <script>
@@ -27,10 +26,10 @@ export default {
     };
 
     navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
-      this.$refs.video.srcObject = stream;
+      video.srcObject = stream;
     });
 
-    document.body.appendChild(video);
+    document.getElementById("lol").appendChild(video);
       }
     }
 }
