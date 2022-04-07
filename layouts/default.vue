@@ -107,6 +107,11 @@ export default {
           to: '/CamAndVidTestStepper'
         },
         {
+          icon: 'mdi-eye',
+          title: 'CamAndVidTestTwo',
+          to: '/CamAndVidTestTwo'
+        },
+        {
           icon: 'mdi-star',
           title: 'CamAndVidTest',
           to: '/CamAndVidTest'
